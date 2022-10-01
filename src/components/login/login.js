@@ -2,7 +2,8 @@ import React from 'react';
 // import './login.css'
 
 const Login = () => (
-		<div class='card p-5 mt-5'>
+	<div class="row d-flex justify-content-center">
+		<div class='card p-5 mt-5' style={{ width: 600 }}>
 			<div class="card-body">
 				<center>
 					<h5 class="card-title">Login to your account</h5>
@@ -36,6 +37,7 @@ const Login = () => (
 				</form>
 			</div>
 		</div>
+	</div>
 );
 
 export default Login;
