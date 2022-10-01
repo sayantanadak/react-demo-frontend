@@ -1,43 +1,51 @@
 import React from 'react';
-// import './login.css'
+import { useNavigate } from "react-router-dom";
 
-const Login = () => (
-	<div class="row d-flex justify-content-center">
-		<div class='card p-5 mt-5' style={{ width: 600 }}>
-			<div class="card-body">
-				<center>
-					<h5 class="card-title">Login to your account</h5>
-				</center>
-				<br />
-				<form>
-					<div class="form-outline mb-4">
-						<label class="form-label" for="form2Example1">Email</label>
-						<input type="email" id="form2Example1" class="form-control" placeholder='youremail@domain.com' />
-					</div>
+const Login = () => {
+	const navigate = useNavigate();
+	const navigateToSignUp = () => {
+		navigate('/signup');
+	};
 
-					<div class="form-outline mb-4">
-						<label class="form-label" for="form2Example2">Password</label>
-						<input type="password" id="form2Example2" class="form-control" />
-					</div>
+	return (
+		<div className="row d-flex justify-content-center">
+			<div className='card p-5 mt-5' style={{ width: 600 }}>
+				<div className="card-body">
+					<center>
+						<h5 className="card-title">Login to your account</h5>
+					</center>
+					<br />
+					<form>
+						<div className="form-outline mb-4">
+							<label className="form-label">Email</label>
+							<input type="email" id="form2Example1" className="form-control" placeholder='your.email@domain.com' />
+						</div>
 
-					<div class="row mb-4">
-						<div class="col d-flex">
-							<div class="form-check">
-								<label class="form-check-label" for="form2Example31"> Remember me </label>
+						<div className="form-outline mb-4">
+							<label className="form-label">Password</label>
+							<input type="password" id="form2Example2" className="form-control" />
+						</div>
+
+						<div className="row mb-4">
+							<div className="col d-flex">
+								<div className="form-check">
+									<input className="form-check-input" type="checkbox" value="" id="form2Example31" />
+									<label className="form-check-label"> Remember me </label>
+								</div>
 							</div>
 						</div>
-					</div>
 
-					<button type="button" class="btn btn-block w-100 p-2.5" style={{ backgroundColor: '#1d4c8f', color: 'white' }}>Login</button>
-					<br />
-					<br />
-					<div class="text-center">
-						<p>New to MyApp? <a class='text-decoration-none' href="#!">Sign Up</a></p>
-					</div>
-				</form>
+						<button type="button" className="btn btn-block w-100 p-2.5" style={{ backgroundColor: '#1d4c8f', color: 'white' }}>Login</button>
+						<br />
+						<br />
+						<div className="text-center">
+							<p>New to MyApp?<button className="btn btn-link text-decoration-none p-1 mb-1" onClick={navigateToSignUp}>Sign Up</button></p>
+						</div>
+					</form>
+				</div>
 			</div>
 		</div>
-	</div>
-);
+	);
+};
 
 export default Login;
