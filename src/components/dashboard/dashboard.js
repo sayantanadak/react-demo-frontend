@@ -1,4 +1,5 @@
 import React from 'react';
+import './dashboard.css'
 import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
@@ -18,11 +19,24 @@ const Dashboard = () => {
 							<table class="table">
 								<thead>
 									<tr>
-										<th scope="col">#</th>
-										<th scope="col">First</th>
-										<th scope="col">Last</th>
-										<th scope="col">Handle</th>
-										<th scope="col">Handle</th>
+										<th scope="col">
+											<div class="switches-container">
+												<input type="radio" id="switchMonthly" name="switchPlan" value="Monthly" checked="checked" />
+												<input type="radio" id="switchYearly" name="switchPlan" value="Yearly" />
+												<label for="switchMonthly">Monthly</label>
+												<label for="switchYearly">Yearly</label>
+												<div class="switch-wrapper">
+													<div class="switch">
+														<div>Monthly</div>
+														<div>Yearly</div>
+													</div>
+												</div>
+											</div>
+										</th>
+										<th scope="col">Mobile</th>
+										<th scope="col">Basic</th>
+										<th scope="col">Standard</th>
+										<th scope="col">Premium</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -56,6 +70,9 @@ const Dashboard = () => {
 									</tr>
 								</tbody>
 							</table>
+							<br/>
+							<br/>
+							<br/>
 							<button type="button" className="btn btn-block" style={{ backgroundColor: '#1d4c8f', color: 'white', width: 300 }}>Next</button>
 						</form>
 					</center>
