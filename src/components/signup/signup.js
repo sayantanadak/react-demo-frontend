@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { userState } from 'react';
 import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
@@ -6,6 +6,12 @@ const Signup = () => {
 	const navigateToLogin = () => {
 		navigate('/login');
 	};
+
+	const [user, setUser] = userState ({
+		name:"",
+		email:"",
+		password:"",
+	});
 
 	return (
 		<div className="row d-flex justify-content-center">
@@ -18,17 +24,17 @@ const Signup = () => {
 					<form>
 						<div className="form-outline mb-4">
 							<label className="form-label">Name</label>
-							<input type="text" id="" className="form-control" placeholder='Enter your name...' />
+							<input type="text" name="name" value="name" id="" className="form-control" placeholder='Enter your name...' />
 						</div>
 
 						<div className="form-outline mb-4">
 							<label className="form-label">Email</label>
-							<input type="email" id="" className="form-control" placeholder='your.email@domain.com' />
+							<input type="email" name="email" value="email" id="" className="form-control" placeholder='your.email@domain.com' />
 						</div>
 
 						<div className="form-outline mb-4">
 							<label className="form-label">Password</label>
-							<input type="password" id="" className="form-control" />
+							<input type="password" name="password" value="password" id="" className="form-control" />
 						</div>
 
 						<div className="row mb-4">
