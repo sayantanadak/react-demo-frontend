@@ -4,8 +4,12 @@ import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
 	const navigate = useNavigate();
-	const navigateToDashBoard = () => {
-		navigate('/signup');
+	const navigateToLogin = () => {
+		navigate('/login');
+	};
+
+	const navigateToSubscriptionStatus = () => {
+		navigate('/subscription-status');
 	};
 
 	return (
@@ -70,9 +74,11 @@ const Dashboard = () => {
 									</tr>
 								</tbody>
 							</table>
-							<br/>
-							<br/>
-							<br/>
+							<br />
+							<br />
+							<br />
+							<button type="button" className="btn btn-block" onClick={navigateToSubscriptionStatus} style={{ backgroundColor: '#1d4c8f', color: 'white', width: 300 }}>Subscription Status</button>
+							<button type="button" className="btn btn-block m-2" onClick={navigateToLogin} style={{ backgroundColor: '#1d4c8f', color: 'white', width: 300 }}>Logout</button>
 							<button type="button" className="btn btn-block" style={{ backgroundColor: '#1d4c8f', color: 'white', width: 300 }}>Next</button>
 						</form>
 					</center>
