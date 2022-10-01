@@ -7,6 +7,10 @@ const Login = () => {
 		navigate('/signup');
 	};
 
+	const navigateToDashBoard = () => {
+		navigate('/dashboard');
+	};
+
 	return (
 		<div className="row d-flex justify-content-center">
 			<div className='card p-5 mt-5' style={{ width: 600 }}>
@@ -35,7 +39,7 @@ const Login = () => {
 							</div>
 						</div>
 
-						<button type="button" className="btn btn-block w-100 p-2.5" style={{ backgroundColor: '#1d4c8f', color: 'white' }}>Login</button>
+						<button type="button" className="btn btn-block w-100 p-2.5" style={{ backgroundColor: '#1d4c8f', color: 'white' }} onClick={navigateToDashBoard}>Login</button>
 						<br />
 						<br />
 						<div className="text-center">
